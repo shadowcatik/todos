@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Todos</title>
+</head>
+<body>
+	<div class="todo">
+	    <h1 class="title">todos</h1>
+	    <div class="todo--wrap">
+	        <form onsubmit="formEvent(); return false">
+		        <input class="todo--list" placeholder="What needs to be done?"  id="new-item" />
+		        <input id="checkbox" class="todo--list__arrow todo--list__checkbox" type="checkbox" />
+	        </form>
+	        <ul class="todos--list__dropdown" id="todo"></ul>
+	        <div id="todo-footer" class="todo--list todo--list__footer">
+	            <div class="items">
+		            <input id="sum" class='sum' value='' />
+		            <span>items left</span>
+	            </div>
+	            <ul class="filters">
+		            <li class="filters--item">
+			            <a data-type="all" class="sorting-item">All</a>
+			        </li>
+			        <li class="filters--item">
+			            <a data-type="active" class="sorting-item">Active</a>
+			        </li>
+			        <li class="filters--item">
+			            <a data-type="completed" class="sorting-item">Completed</a>
+			        </li>
+		        </ul>
+		        <button data-type="clear-all" class="clear">Clear completed</button>  
+	        </div>
+	    </div>
+	</div>
+	<script src="js/common.js"></script>
+</body>
+</html>

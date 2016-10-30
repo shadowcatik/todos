@@ -1,0 +1,185 @@
+.title 
+  width: 100%
+  font-size: 100px
+  font-weight: 100
+  text-align: center
+  margin: 1rem 0
+  color: rgba(175, 47, 47, 0.15)
+
+.todo--wrap 
+  width: 55rem
+  position: relative
+  margin: 0 auto
+  box-shadow: .1rem .1rem .1rem .1rem #ddd
+
+input
+  &:focus
+    outline-color: #ddd
+  
+button,
+input[type="checkbox"], 
+.sum 
+  outline: none;
+
+.todo--list 
+  display: block
+  width: 89%
+  min-height: 3rem
+  font-size: 2.4rem
+  font-style: italic
+  font-weight: 500
+  padding: 1rem 1rem 1rem 5rem 
+  border: 0.5px solid #ddd
+
+  &__arrow 
+    top: 0.7rem
+    transform: rotate(90deg)
+
+    &:before 
+      content: '>'
+      font-size: 2.9rem
+      color: #e6e6e6
+
+    &:checked:before 
+      color: #737373
+
+  &__dropdown 
+    position: relative
+    margin: 0
+
+  &__checkbox
+    position: absolute
+    left: 1rem
+
+  &__checkmark 
+    width: 3rem
+    height: 3rem
+    top: 1rem
+    border: 1px solid #ddd
+    border-radius: 5rem
+
+  &__footer
+    width: 96%
+    font-size: 1.4rem
+    font-style: normal
+    position: relative
+    justify-content: space-between
+    align-items: flex-start
+    padding: 1rem 1rem 0
+
+    &:before
+      content: ''
+      width: 85%
+      position: absolute
+      bottom: -1.4rem
+      left: 1.5%
+      padding: 0rem 1rem 0.5rem 5rem
+      border-top-width: 0
+      border-left-width: 0.2px
+      border-right-width: 0.2px
+      border: -0.5px solid #ddd
+      box-shadow: .1rem .1rem .1rem .1rem #ddd
+    
+    &:after
+      content: ''
+      position: absolute
+      width: 87%
+      bottom: -0.8rem
+      left: 0.5%
+      padding: 0rem 1rem 0.5rem 5rem
+      border: 0.5px solid #ddd
+      border-top-width: 0
+      border-left-width: 0.2px
+      border-right-width: 0.2px
+      box-shadow: .1rem .1rem .1rem .1rem #ddd
+
+.todo--list.list--item
+  color: #000
+  font-style: normal
+
+.list--item
+  &:after
+    &:hover 
+      color: #000
+
+.destroy
+  display: none
+  width: 4rem
+  height: 4rem
+  font-size: 3rem
+  color: #cc9a9a
+  position: absolute
+  top: 0
+  right: 1rem
+  bottom: 0
+  transition: color 0.2s ease-out
+
+li .destroy
+  &:hover 
+    color: #af5b5e
+  
+  &:after
+    content: '×'
+
+li
+  &:hover 
+    .destroy 
+      display: block
+
+button.destroy,
+.sum,
+.todo--list__checkbox 
+  appearance: none
+
+.selected 
+  background: url(../img/checkmark.svg) no-repeat .7rem;
+
+.select
+  border: .1rem solid rgba(175, 47, 47, 0.2)
+  padding: .5rem
+  border-radius: .3rem
+
+.completed
+  color: #b3a9a9 !important
+  text-decoration: line-through
+
+.filters
+  width: 100%
+  margin: 0
+  text-align: center
+
+  &--item 
+    display: inline-block
+    position: relative
+    bottom: .6rem
+    vertical-align: top
+    margin: 0 0.5rem
+    padding: .5rem;
+    border-radius: .3rem
+    cursor: pointer
+
+    &:hover
+      border: .1rem solid rgba(175, 47, 47, 0.1)
+
+.clear
+  width: 20rem
+
+  &:hover
+    cursor: pointer
+    text-decoration: underline
+
+.todo--list__footer,
+.todo--list__arrow
+  display: none
+
+.items
+  width: 15rem
+
+.sum
+  width: 20%
+  border: none
+ 
+
+
+
+
