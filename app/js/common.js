@@ -56,7 +56,7 @@ todo.onmousedown = function() {
   return false;
 };
 
-// --- функции для выделения ---
+// функции для выделения
 
 function toggleSelect(input) {
   if (!input.classList.contains('selected'))
@@ -64,6 +64,7 @@ function toggleSelect(input) {
   else
     ++items;
   sum.setAttribute('value', items);
+  
   input.classList.toggle('selected');  
   input.nextSibling.classList.toggle('completed');
   
@@ -98,10 +99,12 @@ checkbox.addEventListener ('click', function() {
 //Удаление пункта списка
 
 todo.addEventListener('click', function(){ 
-  --this.items;
   if (!event.target.classList.contains('destroy')) return;   
   event.target.parentNode.remove();
-    
+
+  --items;
+  sum.setAttribute('value', items);  
+
   removeFooter();  
 });
 
